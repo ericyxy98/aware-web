@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: aware_app
+    restart: always
+    build: .
+    networks:
+      - db_network
+    ports:
+      - 8000:8000
+networks:
+  db_network:
+    driver: bridge
+ 
